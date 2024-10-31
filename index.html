@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .calendar {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(248, 189, 7, 1);
+            color: white;
+        }
+
+        .calendar-header button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .calendar-body {
+            padding: 10px;
+        }
+
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            color: rgba(248, 189, 7, 1);
+            font-weight: bold;
+        }
+
+        .calendar-dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .calendar-dates div {
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .calendar-dates div:hover {
+            background-color: #e0e7ff;
+        }
+
+        .calendar-dates .today {
+            background-color: rgba(248, 189, 7, 1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm py-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" alt="" class="w-100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">sevices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">cummuinty</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-success" type="submit">book now</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 d-flex justify-content-center">
+        <form action="" class="shadow-md form">
+            <div class="left d-flex flex-column justify-content-between">
+                <ul id="tabs-btns">
+                    <li data-tab="data-time">
+                        <i class="fa-regular fa-calendar-days me-2"></i>
+                        Date & Time
+                    </li>
+                    <li data-tab="your-info">
+                        <i class="fa-regular fa-user me-2"></i>
+                        Your Information
+                    </li>
+                    <li data-tab="payment">
+                        <i class="fa-regular fa-credit-card me-2"></i>
+                        Payments
+                    </li>
+                </ul>
+
+                <div class="info ">
+                    <div class="contact py-3 d-flex flex-column justify-content-center w-100 align-items-center">
+                        <p class="m-0">Get in Touch</p>
+                        <a href="tel:+918590925353">+918590925353</a>
+                        <a href="mailto:help@oppam.me">help@oppam.me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="data-time"  class="tab show">
+                    <div class="top">
+                        <h5 class="shadow-sm m-0">Date & Time</h5>
+                        <div class="inputs d-flex justify-content-between align-items-center w-100">
+                            <select name="" id="">
+                                <option value="">October</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">2024</option>
+                            </select>
+                            <div class="right-left-btns">
+                                <button class="left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="head">
+                            <p class="text-center">Hey, there are special packages with this service, check them out!
+                            </p>
+                        </div>
+                        <div class="boxes">
+                            <div class="box d-flex">
+                                <div class="left w-50">
+                                    <h6 class="fw-bold">4 sessions</h6>
+                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </div>
+                                <div class="right w-50 d-flex justify-content-around">
+                                    <div class="save-badge">save 10%</div>
+                                    <div class="price-badge">3,599$</div>
+                                </div>
+                            </div>
+                            <div class="box d-flex">
+                                <div class="left w-50">
+                                    <h6 class="fw-bold">4 sessions</h6>
+                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </div>
+                                <div class="right w-50 d-flex justify-content-around">
+                                    <div class="save-badge">save 10%</div>
+                                    <div class="price-badge">3,599$</div>
+                                </div>
+                            </div>
+                            <div class="box d-flex">
+                                <div class="left w-50">
+                                    <h6 class="fw-bold">4 sessions</h6>
+                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </div>
+                                <div class="right w-50 d-flex justify-content-around">
+                                    <div class="save-badge">save 10%</div>
+                                    <div class="price-badge">3,599$</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="your-info"  class="tab">
+                    <div class="tab-header">
+                        <h5>Your Information</h5>
+                    </div>
+                    <div class="content d-flex">
+                            <div>
+                                <label for="name" class="form-label fw-bold">Name</label>
+                                <div class="input-group mb-3">
+                                    <!-- <span class="input-group-text" id="basic-addon3"></span> -->
+                                    <input type="text" class="form-control" id="name" aria-describedby="basic-addon3"
+                                        placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="form-label fw-bold">Email:</label>
+                                <div class="input-group mb-3">
+                                    <!-- <span class="input-group-text" id="basic-addon3"></span> -->
+                                    <input type="text" class="form-control" id="email" aria-describedby="basic-addon3"
+                                        placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="form-label fw-bold">Phone:</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text h-100" id="basic-addon3 flag-selection"
+                                        style="position: relative;">
+                                        <div class="image-flag"><img width="21" height="21"
+                                                src="./images/flages/1x1/in.svg" alt="in" /></div>
+                                        <button id="open-select"><i class="fa-solid fa-chevron-down"></i></button>
+                                        <ul id="select">
+                                            <li data-flag="in"><img width="21" height="21" src="./images/flages/1x1/in.svg" alt="in" />
+                                                india</li>
+                                            <li data-flag="eg"><img width="21" height="21" src="./images/flages/1x1/eg.svg" alt="in" />
+                                                egypt</li>
+                                            <li data-flag="es"><img width="21" height="21" src="./images/flages/1x1/es.svg" alt="in" />
+                                                spanish</li>
+                                            <li data-flag="cn"><img width="21" height="21" src="./images/flages/1x1/cn.svg"
+                                                    alt="in" />china</li>
+                                            <li data-flag="fr"><img width="21" height="21" src="./images/flages/1x1/fr.svg"
+                                                    alt="in" />french</li>
+                                        </ul>
+                                    </span>
+                                    <input type="text" class="form-control" id="phone" aria-describedby="basic-addon3"
+                                        placeholder="Enter phone">
+                                    <p style="font-size: 0.8rem;color:rgba(26, 44, 55, 0.5);margin: 0;">
+                                        By entering your phone number you agree to receive messages via WhatsApp
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="age" class="form-label fw-bold">Age</label>
+                                <div class="input-group mb-3">
+                                    <!-- <span class="input-group-text" id="basic-addon3"></span> -->
+                                    <input type="text" class="form-control" id="age" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div id="payment" class="tab">
+                    <div class="tab-header">
+                        <h5>Payments</h5>
+                    </div>
+                    <div class="content d-flex justify-content-center align-items-center">
+                        <div class="payment-box" style="width: 80%;">
+                            <p class="fw-bold">summary</p>
+                            <div class="copon-box">
+                                <div class="package">
+                                    <h6>package</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>4 Sessions</p>
+                                        <p>₹3,599</p>
+                                    </div>
+                                </div>
+                                <div class="add-copon d-flex py-4">
+                                    <label for="" class="me-2">Coupon:</label>
+                                    <input type="text" class="form-control me-2" id="age" aria-describedby="basic-addon3">
+                                    <button>Add</button>
+                                </div>
+                                <div class="total d-flex justify-content-between align-items-center">
+                                    <p class="m-0 fw-bold">Total Amount:</p>
+                                    <p class="m-0 fw-bold">₹3,599</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="calender" class="p-3">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button onclick="prevMonth">&#10094;</button>
+                            <div id="monthYear"></div>
+                            <button onclick="nextMonth">&#10095;</button>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="calendar-days">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="calendar-dates" id="calendarDates"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let flagSelect = document.querySelector('#open-select')
+        let flagSelectBox = document.querySelector('#select')
+        let flags = document.querySelectorAll('#select li')
+        let selected = document.querySelector('.image-flag img') 
+        let tabsBtns = document.querySelectorAll('#tabs-btns li')
+
+        flagSelect.addEventListener('click', (e) => {
+            e.preventDefault()
+            flagSelectBox.classList.toggle('show')
+        })
+
+        flags.forEach((flag) => {
+            flag.addEventListener('click', () => {
+                selected.setAttribute('src' , `./images/flages/1x1/${flag.dataset.flag}.svg`)
+                flagSelectBox.classList.toggle('show')
+            })
+        })
+
+        tabsBtns.forEach(tab => {
+            tab.addEventListener('click' , () => {
+                let alltabs = document.querySelectorAll('.tab')
+                alltabs.forEach(t => {
+                    t.classList.remove('show')
+                })
+                document.querySelector(`#${tab.dataset.tab}`).classList.add('show')
+                // console.log(tab.dataset.tab)
+            })
+        })
+    </script>
+    <script>
+        const monthYear = document.getElementById("monthYear");
+        const calendarDates = document.getElementById("calendarDates");
+
+        let currentDate = new Date();
+
+        function renderCalendar(date) {
+            calendarDates.innerHTML = "";
+            const year = date.getFullYear();
+            const month = date.getMonth();
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const lastDate = new Date(year, month + 1, 0).getDate();
+
+            monthYear.textContent = date.toLocaleString("default", {
+                month: "long",
+                year: "numeric"
+            });
+
+            for (let i = 0; i < firstDay; i++) {
+                calendarDates.innerHTML += "<div></div>";
+            }
+
+            for (let i = 1; i <= lastDate; i++) {
+                const dayDiv = document.createElement("div");
+                dayDiv.textContent = i;
+
+                const today = new Date();
+                if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
+                    dayDiv.classList.add("today");
+                }
+
+                calendarDates.appendChild(dayDiv);
+            }
+        }
+
+        function prevMonth(e) {
+            e.preventDefault()
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        }
+
+        function nextMonth(e) {
+            e.preventDefault()
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        }
+
+        renderCalendar(currentDate);
+    </script>
+</body>
+
+</html>

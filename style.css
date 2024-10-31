@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+/* start header */
+.navbar-brand {
+    width: 190px;
+}
+/* end header */
+.form {
+    width: 70% !important;
+    min-height: 600px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form > .left {
+    width: 30%;
+    padding: 15px;
+    background-color: rgba(248, 189, 7, 1);
+}
+.form .left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    
+}
+.form .left ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    cursor: pointer;
+}
+.form .left .info .contact p{
+    color: #fff;
+    margin-bottom: 10px !important;
+}
+.form .left .info .contact a {
+ text-decoration: none;
+ color: #fff;
+}
+.form .right {
+    width: 70%;
+}
+.form .right .top h5 {
+    background-color: #eee;
+    padding: 15px;
+    width: 100%;
+}
+.form .right .top .inputs {
+    background-color: #eee;
+    padding: 15px;
+}
+.form .right .top .inputs select {
+    all: unset;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 30%;
+}
+.form .right .top .inputs .right-left-btns button {
+    all: unset;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.form .right .content {
+    padding: 15px;
+}
+.form .right .content .boxes .box  {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.form .right .content .boxes .box .right  {
+    align-items: start;
+}
+.form .right .content .boxes .box .right > div {
+    padding: 5px 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.form .right .content .boxes .box .right > div.save-badge {
+    color: #019719 ;
+    background-color: #01971a25;
+} 
+.form .right .content .boxes .box .right > div.price-badge {
+    color:#000;
+    background-color: #ccc;
+}
+/* start your info tab */
+.tab-header {
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#your-info .content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center
+}
+#your-info .content > div {
+    width: 45%;
+    
+}
+#open-select {
+    all:unset;
+    width: 21px;
+    height: 21px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#select {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transform: translateY(110%);
+    -webkit-transform: translateY(110%);
+    -moz-transform: translateY(110%);
+    -ms-transform: translateY(110%);
+    -o-transform: translateY(110%);
+    z-index: 300;
+    background-color: #fff;
+    padding: 10px 5px;
+    list-style: none;
+    height: 100px;
+    overflow-y: auto;
+    display: none;
+    width: fit-content;
+    display: none;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+#select.show {
+    display: flex;
+}
+#select li {
+    padding: 5px 10px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+#select li img {
+    margin-right: 10px;
+}
+#select li:hover {
+    background-color: #eee;
+
+}
+#select::-webkit-scrollbar {
+    width: 5px;
+}
+#select::-webkit-scrollbar-thumb {
+    background-color:#ddd;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+#payment .copon-box {
+    border: 2px solid rgba(100, 100, 111, 0.2);
+    padding: 20px;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+}
+#payment .copon-box .package {
+    padding: 20px 10px;
+    border: 2px solid rgba(100, 100, 111, 0.2);
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+#payment .copon-box .package  p {
+    margin: 0;
+}
+#payment .copon-box .add-copon {
+    align-items:center;
+}
+#payment .copon-box .add-copon button {
+    all: unset;
+    padding: 5px 10px;
+    color:#fff;
+    background-color:rgba(248, 189, 7, 1);
+    cursor: pointer;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.tab { 
+    display: none;
+}
+.tab.show {
+    display: block;
+}
