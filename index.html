@@ -107,7 +107,7 @@
     </nav>
 
     <div class="container py-5 d-flex justify-content-center">
-        <form action="" class="shadow-md form">
+        <div action="" class="shadow-md form">
             <div class="left d-flex flex-column justify-content-between">
                 <ul id="tabs-btns">
                     <li data-tab="data-time">
@@ -278,9 +278,9 @@
                 <div id="calender" class="p-3">
                     <div class="calendar">
                         <div class="calendar-header">
-                            <button onclick="prevMonth">&#10094;</button>
+                            <button onclick="prevMonth()">&#10094;</button>
                             <div id="monthYear"></div>
-                            <button onclick="nextMonth">&#10095;</button>
+                            <button onclick="nextMonth()">&#10095;</button>
                         </div>
                         <div class="calendar-body">
                             <div class="calendar-days">
@@ -297,7 +297,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
@@ -370,13 +370,11 @@
         }
 
         function prevMonth(e) {
-            e.preventDefault()
             currentDate.setMonth(currentDate.getMonth() - 1);
             renderCalendar(currentDate);
         }
 
         function nextMonth(e) {
-            e.preventDefault()
             currentDate.setMonth(currentDate.getMonth() + 1);
             renderCalendar(currentDate);
         }
