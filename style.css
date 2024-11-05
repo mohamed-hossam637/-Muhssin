@@ -243,3 +243,25 @@
 .tab.show {
     display: block;
 }
+
+.time-slot ul {
+    list-style: none;
+}
+
+.time-slot ul li {
+    width: calc(98% / 2);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: 1px solid rgba(248, 189, 7, 1);
+    background-color: rgba(248, 188, 7, 0.127);
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.time-slot ul li.not-active {
+    opacity: 0.5;
+    cursor: no-drop;
+}
